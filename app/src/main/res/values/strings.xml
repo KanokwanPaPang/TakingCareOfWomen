@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Period</string>
+    <string name="tasks">รายงานบันทึกการมีประจำเดือน</string>
+    <string name="task_title">วันแรกที่มีประจำเดือน</string>
+    <string name="new_task">เพิ่มการมีประจำเดือน</string>
+    <string name="task">ประจำเดือน</string>
+    <string name="save">บันทึก</string>
+    <string name="no_task">ไม่มีข้อมูลประจำเดือน</string>
+    <string name="task_content">Content</string>
+    <string name="unsaved_exit_alert">You have unsaved data. Are you sure you want to exit?</string>
+    <string name="title_is_required">Task title is required.</string>
+    <string name="edit">แก้ไข</string>
+    <string name="delete">ลบ</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="edit_task">แก้ไขข้อมูลประจำเดือน</string>
+</resources>
