@@ -3,7 +3,6 @@ package org.usablelabs.duedo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -78,7 +77,6 @@ public class FormSexActivity extends BaseActivity {
         super.onRestart();
 
         index_protect = 0;
-        Log.e("LOG", "onrestrat");
         sex = new ArrayList<Sex>(Sex.getAll());
         adapter = new SexAdapter(this, sex);
         listView.setAdapter(adapter);

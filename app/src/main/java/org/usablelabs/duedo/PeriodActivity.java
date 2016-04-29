@@ -2,7 +2,6 @@ package org.usablelabs.duedo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -71,9 +70,7 @@ public class PeriodActivity extends BaseActivity {
     protected void onRestart() {
         super.onRestart();
 
-        Log.e("LOG", "onrestrat");
         tasks = new ArrayList<Task>(Task.getAll());
-        Log.e("SIZE",tasks.size()+"");
         adapter = new TasksAdapter(this, tasks);
         listView.setAdapter(adapter);
     }

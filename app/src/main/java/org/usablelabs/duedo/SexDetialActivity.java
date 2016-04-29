@@ -7,14 +7,11 @@ import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
@@ -85,15 +82,10 @@ public class SexDetialActivity extends BaseActivity {
                 db = new Sex();
             db.date = titleEdit.getText().toString();
             db.v1 = check1.isChecked();
-            Log.e("c1",check1.isChecked()+"");
             db.v2 = check2.isChecked();
-            Log.e("c1",check2.isChecked()+"");
             db.v3 = check3.isChecked();
-            Log.e("c1",check3.isChecked()+"");
             db.v4 = check4.isChecked();
-            Log.e("c1",check4.isChecked()+"");
             db.v5 = check5.isChecked();
-            Log.e("c1",check5.isChecked()+"");
             db.saveWithTimestamp();
             setResult(Activity.RESULT_OK, new Intent().putExtra("id", db.getId()));
             this.finish();

@@ -190,9 +190,7 @@ public class ListActivity extends BaseActivity {
     protected void onRestart() {
         super.onRestart();
 
-        Log.e("LOG", "onrestrat");
         tasks = new ArrayList<Task>(Task.getAll());
-        Log.e("SIZE", tasks.size() + "");
         adapter = new TasksAdapter(this, tasks);
         listView.setAdapter(adapter);
 
@@ -232,7 +230,6 @@ public class ListActivity extends BaseActivity {
         Date nextegg_end = null;
 
         for (int i = 0; i < tasks.size(); i++) {
-            Log.e("Date", tasks.get(i).title);
 
             DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
             Date startDate = null;
@@ -259,7 +256,6 @@ public class ListActivity extends BaseActivity {
                         / (1000 * 60 * 60 * 24));
             }
 
-            Log.e("Diff", diffInDays + "");
             for (int j = 0; j < diffInDays; j++) {
                 cal.add(Calendar.DATE, 1);
                 pinkDate = cal.getTime();
@@ -296,7 +292,6 @@ public class ListActivity extends BaseActivity {
                 caldroidFragment.setBackgroundDrawableForDate(green, pinkDate);
                 caldroidFragment.setTextColorForDate(R.color.colorAccent, pinkDate);
 
-                Log.e("lenght", predictLeght + "");
 
                 for (int j = 1; j < predictLeght; j++) {
                     cal.add(Calendar.DATE, 1);
@@ -345,7 +340,6 @@ public class ListActivity extends BaseActivity {
         tasks = new ArrayList<Task>(Task.getAll());
 
         for (int i = 0; i < tasks.size(); i++) {
-            Log.e("Date", tasks.get(i).title);
 
             DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
             Date startDate = null;
@@ -372,7 +366,6 @@ public class ListActivity extends BaseActivity {
                         / (1000 * 60 * 60 * 24));
             }
 
-            Log.e("Diff", diffInDays + "");
             for (int j = 0; j < diffInDays; j++) {
                 cal.add(Calendar.DATE, 1);
                 blueDate = cal.getTime();
@@ -408,7 +401,6 @@ public class ListActivity extends BaseActivity {
                 caldroidFragment.setBackgroundDrawableForDate(green, blueDate);
                 caldroidFragment.setTextColorForDate(R.color.colorblack, blueDate);
 
-                Log.e("lenght", predictLeght + "");
 
                 for (int j = 1; j < predictLeght; j++) {
                     cal.add(Calendar.DATE, 1);

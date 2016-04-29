@@ -1,7 +1,6 @@
 package org.usablelabs.duedo;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;
@@ -84,7 +83,6 @@ public class LineChartActivity extends BaseActivity {
         int num = 0;
         for (int i=0;i<yes.size();i++){
             if(yes.get(i)>0) {
-                Log.e("Yes : ",yes.get(i)+"");
                 dataSets.add(new Entry(yes.get(i), num));
                 num++;
             }
@@ -116,7 +114,6 @@ public class LineChartActivity extends BaseActivity {
         for(int i=0;i<12;i++){
             String value = "";
             if(month.get(i)>0){
-                Log.e("Month",i+"");
                 switch (i){
                     case 0:
                         value = "JAN";
@@ -155,7 +152,6 @@ public class LineChartActivity extends BaseActivity {
                         value = "DEC";
                         break;
                 }
-                Log.e("VALUE",value);
                 xAxis.add(value);
             }
         }

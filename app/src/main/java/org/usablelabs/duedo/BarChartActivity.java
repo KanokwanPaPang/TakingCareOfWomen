@@ -2,7 +2,6 @@ package org.usablelabs.duedo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -92,13 +91,12 @@ public class BarChartActivity extends BaseActivity {
         ArrayList<BarEntry> valueSet2 = new ArrayList<>();
         int num = 0;
         for (int i=0;i<yes.size();i++){
-            Log.e(i+":", yes.get(i)+" , "+no.get(i));
+
             if(yes.get(i)>0 || no.get(i)>0) {
-                //Log.e("Yes", yes.get(i) + "");
                 BarEntry v1e1 = new BarEntry(yes.get(i), num); // Jan
                 valueSet1.add(v1e1);
 
-                //Log.e("No", no.get(i) + "");
+
                 BarEntry v2e1 = new BarEntry(no.get(i), num); // Jan
                 valueSet2.add(v2e1);
                 num++;
@@ -180,7 +178,6 @@ public class BarChartActivity extends BaseActivity {
                         value = "DEC";
                         break;
                 }
-                Log.e("VALUE",value);
                 xAxis.add(value);
             }
         }

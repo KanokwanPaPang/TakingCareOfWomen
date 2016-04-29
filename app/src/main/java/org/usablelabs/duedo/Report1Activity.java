@@ -3,7 +3,6 @@ package org.usablelabs.duedo;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,9 +66,7 @@ public class Report1Activity  extends BaseActivity {
     protected void onRestart() {
         super.onRestart();
 
-        Log.e("LOG", "onrestrat");
         tasks = new ArrayList<Task>(Task.getAll());
-        Log.e("SIZE",tasks.size()+"");
         adapter = new TasksReport1Adapter(this, tasks);
         listView.setAdapter(adapter);
     }

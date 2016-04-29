@@ -6,8 +6,6 @@ import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -47,12 +45,7 @@ public class Form2SexActivity extends BaseActivity {
         check4 = (CheckBox)findViewById(R.id.checkBox4);
         check5 = (CheckBox)findViewById(R.id.checkBox5);
 
-        Log.e("test", "gg");
-        Log.e("V1",task.v1+"");
-        Log.e("V1",task.v2+"");
-        Log.e("V1",task.v3+"");
-        Log.e("V1",task.v4+"");
-        Log.e("V1", task.v5 + "");
+
 
         if(task.v1){
             check1.setChecked(true);
@@ -116,15 +109,10 @@ public class Form2SexActivity extends BaseActivity {
                 task = new Sex();
             task.date = titleEdit.getText().toString();
             task.v1 = check1.isChecked();
-            Log.e("c1", check1.isChecked() + "");
             task.v2 = check2.isChecked();
-            Log.e("c1",check2.isChecked()+"");
             task.v3 = check3.isChecked();
-            Log.e("c1",check3.isChecked()+"");
             task.v4 = check4.isChecked();
-            Log.e("c1",check4.isChecked()+"");
             task.v5 = check5.isChecked();
-            Log.e("c1", check5.isChecked() + "");
             task.saveWithTimestamp();
             setResult(Activity.RESULT_OK, new Intent().putExtra("id", task.getId()));
             Form2SexActivity.this.finish();

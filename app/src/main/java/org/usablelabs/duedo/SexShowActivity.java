@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -108,7 +107,6 @@ public class SexShowActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MenuItem_EditID:
-                Log.e("Edit","Edit");
                 Intent intent = new Intent(this, Form2SexActivity.class);
                 intent.putExtra("id", task.getId());
                 startActivity(intent);
