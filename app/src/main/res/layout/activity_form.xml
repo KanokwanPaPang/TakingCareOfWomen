@@ -27,26 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:id="@+id/titleEdit"
+                android:id="@+id/dateEdit"
                 android:layout_gravity="center_horizontal"
                 android:hint="@string/task_title" />
 
         </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:id="@+id/contentEdit"
-                android:layout_gravity="center_horizontal"
-                android:hint="@string/task_content" />
-
-        </android.support.design.widget.TextInputLayout>
+        
 
     </LinearLayout>
 </RelativeLayout>

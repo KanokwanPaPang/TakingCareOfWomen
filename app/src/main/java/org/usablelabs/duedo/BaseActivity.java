@@ -37,29 +37,58 @@ public abstract class BaseActivity extends AppCompatActivity {
             if (upEnabled) {
                 supportActionBar.setDisplayHomeAsUpEnabled(true);
             } else {
-                final Intent intent = new Intent(this, FormActivity.class);
+                //final Intent intent = new Intent(this, FormActivity.class);
                 new DrawerBuilder()
                         .withActivity(this)
                         .withToolbar(toolbar_main)
                         .addDrawerItems(
                                 new PrimaryDrawerItem()
-                                        .withName(R.string.new_task)
-                                        .withIcon(MaterialDesignIconic.Icon.gmi_plus)
+                                        .withName("ประจำเดือนของฉัน")
+                                        .withIcon(MaterialDesignIconic.Icon.gmi_accounts_list)
                                         .withSelectable(false)
                                         .withIdentifier(1)
-                        ).withSelectedItem(-1)
+                        ).addDrawerItems(
+                            new PrimaryDrawerItem()
+                                .withName("การมีเพศสัมพันธ์ของฉัน")
+                                .withIcon(MaterialDesignIconic.Icon.gmi_accounts_list)
+                                .withSelectable(false)
+                                .withIdentifier(2)
+                        ).addDrawerItems(
+                                new PrimaryDrawerItem()
+                                        .withName("รายงาน")
+                                        .withIcon(MaterialDesignIconic.Icon.gmi_dock)
+                                        .withSelectable(false)
+                                        .withIdentifier(3)
+                        ).addDrawerItems(
+                        new PrimaryDrawerItem()
+                                .withName("ตั้งค่า")
+                                .withIcon(MaterialDesignIconic.Icon.gmi_settings)
+                                .withSelectable(false)
+                                .withIdentifier(4)
+                ).withSelectedItem(-1)
                         .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                             @Override
                             public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                                 switch (drawerItem.getIdentifier()) {
                                     case 1:
-                                        startActivityForResult(intent, NEW_TASK);
+                                        startActivityForResult(new Intent(getApplicationContext(), PeriodActivity.class), NEW_TASK);
+                                        break;
+                                    case 2:
+                                        startActivityForResult(new Intent(getApplicationContext(), FormSexActivity.class), NEW_TASK);
+                                        break;
+                                    case 3:
+                                        startActivityForResult(new Intent(getApplicationContext(), ReportActivity.class), NEW_TASK);
+                                        break;
+                                    case 4:
+                                        startActivityForResult(new Intent(getApplicationContext(), SettingActivity.class), NEW_TASK);
                                         break;
                                 }
                                 return false;
                             }
                         })
                         .build();
+
+
             }
     }
 

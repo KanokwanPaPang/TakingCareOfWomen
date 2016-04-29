@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
-public class ShowActivity extends BaseActivity {
+public class PeriodShowActivity extends BaseActivity {
 
     private Task     task = null;
     private TextView titleView;
@@ -24,9 +24,9 @@ public class ShowActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show);
+        setContentView(R.layout.activity_period_show);
         setDrawer(true);
-        setTitle(R.string.task);
+        setTitle("ข้อมูลประจำเดือน");
 
         titleView = (TextView) findViewById(R.id.titleView);
         contentView = (TextView) findViewById(R.id.contentView);
@@ -57,7 +57,7 @@ public class ShowActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case MenuItem_EditID:
-                Intent intent = new Intent(this, FormActivity.class);
+                Intent intent = new Intent(this, FormPeriodActivity.class);
                 intent.putExtra("id", task.getId());
                 startActivityForResult(intent, EDIT_TASK);
                 break;

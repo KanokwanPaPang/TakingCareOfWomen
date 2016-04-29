@@ -28,13 +28,46 @@
         android:textColor="@android:color/darker_gray"
         android:visibility="gone"/>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/newFab"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/calendar1"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+        android:orientation="vertical">
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/calendar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_detail"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#6c0679"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/calendar1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="-"/>
+
+    <TextView
+        android:id="@+id/txt_detail1"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#6c0679"
+        android:layout_below="@id/txt_detail"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="-"/>
+    </LinearLayout>
 
 </RelativeLayout>
